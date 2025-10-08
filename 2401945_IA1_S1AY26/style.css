@@ -1,0 +1,109 @@
+:root {
+  --main-color: #d86ba5;
+  --bg-color: #c2559e;
+  --bordercolor: #660033;
+  --accent-color: #ff6699;
+  --primary-font: "Noto Sans", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+  }
+
+body {
+  font-family: var(--primary-font);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+header, nav, main, footer {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+
+nav {
+  background-color: var(--main-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: var(--bordercolor);
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
+
+img.logo {
+  width: 100px;
+  border-radius: 50%;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 950px) {
+  body {
+    max-width: 950px;
+    margin: auto;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card {
+  background-color: var(--main-color);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+@media (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 950px) {
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .intro, .favorites, .my-list {
+    flex: 1 1 30%;
+  }
+}
+
